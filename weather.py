@@ -113,19 +113,20 @@ def display_weather_info(weather_data, imperial=False):
 
 def _select_weather_display_params(weather_id):
     if weather_id in THUNDERSTORM:
-        display_params = ("⛈", style.RED)
+        display_params = ("⛈️", style.RED)
     elif weather_id in DRIZZLE:
         display_params = ("💧", style.CYAN)
     elif weather_id in RAIN:
         display_params = ("💦", style.BLUE)
     elif weather_id in SNOW:
-        display_params = ("⛄️", style.WHITE)
+        display_params = ("⛄️🌨️", style.WHITE)
     elif weather_id in ATMOSPHERE:
         display_params = ("🌀", style.BLUE)
+    elif weather_id in CLOUDY:
+        display_params = ("☁️", style.WHITE)
     elif weather_id in CLEAR:
         display_params = ("🔆", style.YELLOW)
-    elif weather_id in CLOUDY:
-        display_params = ("💨", style.WHITE)
+  
     else:  # In case the API adds new weather codes
         display_params = ("🌈", style.RESET)
     return display_params
