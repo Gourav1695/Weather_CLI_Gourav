@@ -65,6 +65,7 @@ def build_weather_query(city_input, imperial=False):
         f"&units={units}&APPID={api_key}"
     )
     return url
+    
 
 def get_weather_data(query_url):
     """
